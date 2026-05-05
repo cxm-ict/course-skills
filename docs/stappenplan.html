@@ -577,21 +577,26 @@
   </div>
   <div class="toc-row">
     <div class="toc-num">01</div>
-    <div class="toc-title">Maak je voice-skill af</div>
-    <div class="toc-time">30 min</div>
+    <div class="toc-title">Doorgrond je voice met de stijl-analyse</div>
+    <div class="toc-time">45 min</div>
   </div>
   <div class="toc-row">
     <div class="toc-num">02</div>
+    <div class="toc-title">Bouw je voice-skill</div>
+    <div class="toc-time">30 min</div>
+  </div>
+  <div class="toc-row">
+    <div class="toc-num">03</div>
     <div class="toc-title">Bouw je content-team in één chat</div>
     <div class="toc-time">60 min</div>
   </div>
   <div class="toc-row">
-    <div class="toc-num">03</div>
+    <div class="toc-num">04</div>
     <div class="toc-title">Post de eerste week drie keer</div>
     <div class="toc-time">30 min per post</div>
   </div>
   <div class="toc-row">
-    <div class="toc-num">04</div>
+    <div class="toc-num">05</div>
     <div class="toc-title">Verfijn je skills doorlopend</div>
     <div class="toc-time">10 min per week</div>
   </div>
@@ -599,7 +604,7 @@
 
 <div class="callout">
   <span class="callout-label">Tijd-investering eerste week</span>
-  <p>Stap 0 (alleen als je de workshop niet hebt gevolgd): 10 min. Stap 1: 30 min. Stap 2: 60 min. Stap 3: drie keer 30 min posten. Totaal ongeveer 3 uur. Vanaf week 2: 30 min per post.</p>
+  <p>Stap 0 (alleen zonder workshop): 10 min. Stap 1: 45 min. Stap 2: 30 min. Stap 3: 60 min. Stap 4: drie keer 30 min posten. Totaal ongeveer 4 uur in week 1. Vanaf week 2: 30 min per post.</p>
 </div>
 
 <!-- ========================================== -->
@@ -680,21 +685,25 @@
 </div>
 
 <!-- ========================================== -->
-<!-- STAP 1                                      -->
+<!-- STAP 1 - STIJL-ANALYSE (NIEUW)              -->
 <!-- ========================================== -->
 <div class="step page-break">
   <div class="step-header">
     <div class="step-num">1</div>
     <div class="step-meta">
       <div class="step-eyebrow">Stap één</div>
-      <h2 class="step-title">Maak je voice-skill af</h2>
-      <span class="step-time">30 minuten</span>
+      <h2 class="step-title">Doorgrond je voice met de stijl-analyse</h2>
+      <span class="step-time">45 minuten</span>
     </div>
   </div>
 
   <div class="step-body">
     <p>
-      In blok 3 ben je begonnen aan je <code>linkedin-stijl-template</code>. Waarschijnlijk staan er nog invul-vakken leeg. Maak ze vandaag af.
+      Voordat je een voice-skill bouwt, is het slim om eerst te weten wat je voice eigenlijk is. De <code>linkedin-stijl-analyse</code> skill leest 7-10 van jouw posts plus 14-20 posts van twee of drie concurrenten en levert een complete voice-beschrijving, een vergelijking met die concurrenten, en vijf concrete adviezen.
+    </p>
+
+    <p>
+      Deze stap is technisch optioneel (de voice-skill in stap 2 werkt ook zonder), maar wie deze stap overslaat schrijft de "wat doe ik wel" en "wat doe ik niet" daar veel zwakker in.
     </p>
 
     <h3>Wat je doet</h3>
@@ -702,39 +711,113 @@
     <div class="substep">
       <div class="substep-num">1</div>
       <div class="substep-content">
-        <strong>Plak vijf eigen posts (geen drie).</strong> Drie is genoeg om te beginnen, vijf is genoeg om jouw stem boven die van Claude te krijgen. Kies posts uit verschillende dagen en met verschillende soorten inhoud (een verhaal, een mening, een case). Niet allemaal hetzelfde type.
+        <strong>Verzamel 7 tot 10 eigen posts.</strong> Niet je beste of meest virale, maar je meest typische. Mix verschillende soorten inhoud: een verhaal, een mening, een case, een aankondiging. Plak ze in een tekstbestand zodat je ze straks in één keer kunt versturen.
       </div>
     </div>
 
     <div class="substep">
       <div class="substep-num">2</div>
       <div class="substep-content">
-        <strong>Schrijf de "wat ik NIET doe"-lijst grondig.</strong> Dit is de belangrijkste sectie. Schrijf alles op wat anderen wel doen en jij niet. Clichés, formules, woorden, hooks. Hoe scherper deze lijst, hoe meer je posts naar jou voelen.
+        <strong>Kies 2 of 3 concurrenten.</strong> Dit zijn niet per se directe commerciële concurrenten, maar publieke LinkedIn-figuren in jouw vakgebied wiens stijl je interessant vindt of waar je je tegen wil afzetten. Tip: kies variatie. Bijvoorbeeld een internationale enterprise-stem, een Nederlandse keynote-spreker, een tactische how-to-poster. Variatie maakt de vergelijking scherper.
       </div>
     </div>
 
     <div class="substep">
       <div class="substep-num">3</div>
       <div class="substep-content">
-        <strong>Test op een onbekend onderwerp.</strong> Open Claude, vraag: "Schrijf een LinkedIn-post over [onderwerp dat je nog nooit hebt behandeld] in mijn stijl, gebruik mijn voice-skill." Lees de output hardop. Schuurt iets? Pas de skill aan. Test opnieuw.
+        <strong>Verzamel 7 posts per concurrent</strong> (totaal 14 tot 20). Open hun LinkedIn-profiel, scroll door <em>Activiteit → Bijdragen</em>, kopieer per post de tekst. Sla op in een apart tekstbestand per concurrent. Skip overduidelijk slecht presterende posts en posts die niet over hun vakgebied gaan.
+      </div>
+    </div>
+
+    <div class="substep">
+      <div class="substep-num">4</div>
+      <div class="substep-content">
+        <strong>Run de analyse.</strong> Open Claude.ai, in een nieuwe chat met de <code>linkedin-stijl-analyse</code> skill geladen. Plak je eigen posts en de concurrent-posts in dezelfde prompt, gestructureerd met duidelijke markers per persoon. Vraag: "Doe een stijl-analyse op basis van deze posts." Verwacht 60-90 seconden runtime, 1500-2500 woorden output in zes secties.
+      </div>
+    </div>
+
+    <div class="substep">
+      <div class="substep-num">5</div>
+      <div class="substep-content">
+        <strong>Lees de output kritisch.</strong> Sectie 4 (de voice-beschrijving) is wat je straks in stap 2 in je template plakt. Sectie 1 (hooks, structuur, niet-doen-lijst) bevat de bouwstenen voor je "wat ik wel" en "wat ik niet" doe-secties. Markeer of bewaar de bruikbare stukken.
       </div>
     </div>
   </div>
 
+  <div class="callout">
+    <span class="callout-label">Geen concurrenten beschikbaar?</span>
+    <p>De skill heeft een fallback: als je alleen je eigen posts levert, vervangt hij de concurrent-vergelijking door een interne risico-analyse op je eigen posts. Minder scherp, wel bruikbaar. Liever 7 eigen posts zonder concurrenten dan deze stap overslaan.</p>
+  </div>
+
   <div class="done-as">
     <strong>Klaar als</strong>
-    Je hebt vijf posts geplakt, de "niet-doen"-lijst heeft minimaal zes punten, en de testpost voelt voor minstens 80% als jij.
+    Je hebt een stijl-analyse op je computer staan met een voice-beschrijving, een hook-typering en een lijst patronen die je wel of niet gebruikt. Bewaar 'm: in stap 2 plak je delen ervan in je voice-skill template.
   </div>
 </div>
 
 <!-- ========================================== -->
-<!-- STAP 2                                      -->
+<!-- STAP 2 - VOICE SKILL TEMPLATE               -->
 <!-- ========================================== -->
 <div class="step page-break">
   <div class="step-header">
     <div class="step-num">2</div>
     <div class="step-meta">
       <div class="step-eyebrow">Stap twee</div>
+      <h2 class="step-title">Bouw je voice-skill</h2>
+      <span class="step-time">30 minuten</span>
+    </div>
+  </div>
+
+  <div class="step-body">
+    <p>
+      Nu je weet wat je voice is (uit stap 1), giet je hem in een SKILL die Claude voortaan automatisch gebruikt. Open <code>linkedin-stijl-template/TEMPLATE.md</code> uit de repo en vul de tien secties in.
+    </p>
+
+    <h3>Wat je doet</h3>
+
+    <div class="substep">
+      <div class="substep-num">1</div>
+      <div class="substep-content">
+        <strong>Plak vijf eigen posts in sectie 2.</strong> Niet je beste of meest virale: je meest typische. Kies posts uit verschillende dagen en met verschillende soorten inhoud (verhaal, mening, case). Hoe scherper deze sample, hoe beter de skill.
+      </div>
+    </div>
+
+    <div class="substep">
+      <div class="substep-num">2</div>
+      <div class="substep-content">
+        <strong>Vul secties 3-7 met de output van stap 1.</strong> Voice-zin (sectie 3) komt uit je analyse-output sectie 4. "Wat ik wel doe" en "wat ik niet doe" (sectie 4 en 5 in template) komen uit de hook-typering en niet-doen-lijst van je analyse. Hooks (sectie 6) en CTA's (sectie 7) idem.
+      </div>
+    </div>
+
+    <div class="substep">
+      <div class="substep-num">3</div>
+      <div class="substep-content">
+        <strong>Schrijf de "wat ik NIET doe"-lijst extra grondig.</strong> Dit is het belangrijkste blok. Hoe specifieker je opschrijft welke clichés, formules, woorden en hooks je vermijdt, hoe meer de output naar jou voelt en niet naar Claude.
+      </div>
+    </div>
+
+    <div class="substep">
+      <div class="substep-num">4</div>
+      <div class="substep-content">
+        <strong>Upload de skill in Claude.ai.</strong> Settings → Capabilities → Skills → Add Skill. Geef hem een unieke naam (bijvoorbeeld <code>mijn-linkedin-stijl</code>). Test direct: "Schrijf een LinkedIn-post over [onderwerp dat je nog nooit hebt behandeld] in mijn stijl." Lees de output hardop. Schuurt iets? Pas de skill aan. Test opnieuw.
+      </div>
+    </div>
+  </div>
+
+  <div class="done-as">
+    <strong>Klaar als</strong>
+    Je voice-skill staat in Claude.ai, je "niet-doen"-lijst heeft minimaal zes punten, en de testpost voelt voor minstens 80% als jij.
+  </div>
+</div>
+
+<!-- ========================================== -->
+<!-- STAP 3                                      -->
+<!-- ========================================== -->
+<div class="step page-break">
+  <div class="step-header">
+    <div class="step-num">3</div>
+    <div class="step-meta">
+      <div class="step-eyebrow">Stap drie</div>
       <h2 class="step-title">Bouw je content-team in één chat</h2>
       <span class="step-time">60 minuten</span>
     </div>
@@ -802,13 +885,13 @@
 </div>
 
 <!-- ========================================== -->
-<!-- STAP 3                                      -->
+<!-- STAP 4                                      -->
 <!-- ========================================== -->
 <div class="step page-break">
   <div class="step-header">
-    <div class="step-num">3</div>
+    <div class="step-num">4</div>
     <div class="step-meta">
-      <div class="step-eyebrow">Stap drie</div>
+      <div class="step-eyebrow">Stap vier</div>
       <h2 class="step-title">Post de eerste week drie keer</h2>
       <span class="step-time">30 minuten per post</span>
     </div>
@@ -838,13 +921,13 @@
 </div>
 
 <!-- ========================================== -->
-<!-- STAP 4                                      -->
+<!-- STAP 5                                      -->
 <!-- ========================================== -->
 <div class="step page-break">
   <div class="step-header">
-    <div class="step-num">4</div>
+    <div class="step-num">5</div>
     <div class="step-meta">
-      <div class="step-eyebrow">Stap vier</div>
+      <div class="step-eyebrow">Stap vijf</div>
       <h2 class="step-title">Verfijn je skills doorlopend</h2>
       <span class="step-time">10 minuten per week</span>
     </div>
@@ -943,8 +1026,10 @@
 </p>
 
 <div class="checklist">
-  <div class="checklist-item"><div class="checkbox"></div>Voice-skill afgemaakt met vijf posts en uitgebreide "niet-doen"-lijst</div>
-  <div class="checklist-item"><div class="checkbox"></div>Voice-skill getest op onbekend onderwerp en aangepast</div>
+  <div class="checklist-item"><div class="checkbox"></div>7-10 eigen posts en 14-20 concurrent-posts verzameld</div>
+  <div class="checklist-item"><div class="checkbox"></div>Stijl-analyse uitgevoerd, voice-beschrijving en niet-doen-lijst bewaard</div>
+  <div class="checklist-item"><div class="checkbox"></div>Voice-skill ingevuld met vijf posts en uitgebreide "niet-doen"-lijst</div>
+  <div class="checklist-item"><div class="checkbox"></div>Voice-skill geüpload in Claude.ai en getest op onbekend onderwerp</div>
   <div class="checklist-item"><div class="checkbox"></div>Eén Claude-chat met alle zes skills geladen, gebookmarked</div>
   <div class="checklist-item"><div class="checkbox"></div>Eerste post end-to-end via orchestrator: <em>"rol mijn content team uit voor [X]"</em></div>
   <div class="checklist-item"><div class="checkbox"></div>Post 1 gepubliceerd, logboek-regel ingevuld</div>
