@@ -6,7 +6,7 @@ Zeven skills die samen één workflow vormen: **van je eigen LinkedIn-stijl in k
 
 ---
 
-## De zeven skills
+## De acht skills
 
 | # | Skill | Wat het doet | Voor welk blok |
 |---|-------|--------------|----------------|
@@ -17,6 +17,7 @@ Zeven skills die samen één workflow vormen: **van je eigen LinkedIn-stijl in k
 | 5 | `linkedin-schrijf-agent` | Schrijft post-tekst in jouw voice op basis van een haakje | Blok 4 |
 | 6 | `linkedin-visueel-agent` | Bedenkt 2-3 visuele concepten bij een post | Blok 4 |
 | 7 | `linkedin-polish-agent` | Voegt hashtags, CTA en posttijd toe en levert klaar-om-te-posten | Blok 4 |
+| 8 | `linkedin-content-team` | Orchestrator. Stuurt skills 4-7 aan in volgorde via één prompt | Blok 4 (master) |
 
 ---
 

@@ -2,17 +2,37 @@
 <html lang="nl">
 <head>
 <meta charset="UTF-8">
-<title>Stappenplan na de workshop - Workshop AI &amp; SKILLS</title>
+<title>Stappenplan na de workshop — Workshop AI &amp; SKILLS — CXM-ICT</title>
 <style>
   @page {
     size: A4;
-    margin: 18mm 18mm 22mm 18mm;
-    @bottom-center {
-      content: "CXM-ICT | Workshop AI & SKILLS | 6 mei 2026 | pagina " counter(page) " van " counter(pages);
+    margin: 22mm 20mm 24mm 20mm;
+    @bottom-left {
+      content: "CXM-ICT";
       font-family: Helvetica, Arial, sans-serif;
-      font-size: 9pt;
+      font-size: 8.5pt;
+      color: #6B5B7A;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+    @bottom-center {
+      content: "Workshop AI & SKILLS · 6 mei 2026";
+      font-family: Helvetica, Arial, sans-serif;
+      font-size: 8.5pt;
       color: #6B5B7A;
     }
+    @bottom-right {
+      content: counter(page) " / " counter(pages);
+      font-family: Helvetica, Arial, sans-serif;
+      font-size: 8.5pt;
+      color: #6B5B7A;
+    }
+  }
+  @page :first {
+    margin: 0;
+    @bottom-left { content: ""; }
+    @bottom-center { content: ""; }
+    @bottom-right { content: ""; }
   }
 
   :root {
@@ -20,382 +40,849 @@
     --diep: #2D1647;
     --goud: #B8862C;
     --offwit: #F8F5FB;
+    --offwit-dark: #EFE8F5;
     --donker: #1A1424;
     --muted: #6B5B7A;
+    --line: #E3DDE9;
   }
 
-  * { box-sizing: border-box; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
 
-  body {
-    font-family: Helvetica, Arial, sans-serif;
+  html, body {
+    font-family: Helvetica, Arial, "Helvetica Neue", sans-serif;
     color: var(--donker);
     line-height: 1.55;
-    font-size: 11pt;
-    margin: 0;
+    font-size: 10.5pt;
+    -webkit-font-smoothing: antialiased;
   }
 
+  /* ========== COVER ========== */
   .cover {
-    background: var(--diep);
+    background: linear-gradient(135deg, #2D1647 0%, #1A0B2E 100%);
     color: #fff;
-    padding: 90mm 18mm 30mm 18mm;
-    margin: -18mm -18mm 0 -18mm;
-    page-break-after: always;
+    padding: 35mm 25mm;
     height: 297mm;
+    page-break-after: always;
     position: relative;
+    display: flex;
+    flex-direction: column;
   }
 
-  .cover .label {
+  .cover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60mm;
+    height: 60mm;
+    background: radial-gradient(circle at top right, rgba(184, 134, 44, 0.28), transparent 70%);
+  }
+
+  .cover::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80mm;
+    height: 80mm;
+    background: radial-gradient(circle at bottom left, rgba(91, 45, 138, 0.5), transparent 65%);
+  }
+
+  .cover-brand {
     color: var(--goud);
-    font-size: 11pt;
+    font-size: 9pt;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 4mm;
+    position: relative;
+    z-index: 2;
+  }
+
+  .cover-tag {
+    color: rgba(255,255,255,0.6);
+    font-size: 9pt;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    margin-bottom: 8mm;
+    margin-top: 80mm;
+    position: relative;
+    z-index: 2;
+    border-top: 1px solid rgba(184, 134, 44, 0.4);
+    padding-top: 6mm;
+    width: 60mm;
   }
 
   .cover h1 {
-    font-size: 32pt;
-    line-height: 1.1;
-    margin: 0 0 6mm 0;
+    font-size: 48pt;
+    line-height: 0.98;
+    margin: 6mm 0 10mm 0;
     color: #fff;
-    font-weight: 700;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    position: relative;
+    z-index: 2;
   }
 
-  .cover .sub {
+  .cover-sub {
     font-size: 14pt;
-    color: var(--offwit);
+    color: rgba(255,255,255,0.92);
     max-width: 130mm;
+    line-height: 1.4;
+    font-weight: 300;
+    position: relative;
+    z-index: 2;
   }
 
-  .cover .footer {
-    position: absolute;
-    bottom: 22mm;
-    left: 18mm;
-    right: 18mm;
-    color: var(--offwit);
-    font-size: 10pt;
-    border-top: 1px solid var(--paars);
-    padding-top: 6mm;
+  .cover-meta {
+    margin-top: auto;
+    color: rgba(255,255,255,0.7);
+    font-size: 9.5pt;
+    line-height: 1.7;
+    position: relative;
+    z-index: 2;
+    padding-top: 10mm;
+    border-top: 1px solid rgba(255,255,255,0.15);
+  }
+
+  .cover-meta .row {
+    display: block;
+    margin-bottom: 1.5mm;
+  }
+
+  .cover-meta .label {
+    color: var(--goud);
+    font-size: 8pt;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-right: 4mm;
+    display: inline-block;
+    min-width: 22mm;
+  }
+
+  /* ========== SECTIES ========== */
+  .section-head {
+    margin: 0 0 8mm 0;
+    padding-bottom: 3mm;
+    border-bottom: 2px solid var(--paars);
+    page-break-after: avoid;
+  }
+
+  .section-eyebrow {
+    color: var(--paars);
+    font-size: 8.5pt;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2mm;
   }
 
   h2 {
-    color: var(--paars);
-    font-size: 18pt;
-    margin: 16mm 0 4mm 0;
-    border-bottom: 2px solid var(--paars);
-    padding-bottom: 2mm;
+    color: var(--diep);
+    font-size: 22pt;
+    line-height: 1.1;
+    font-weight: 800;
+    letter-spacing: -0.01em;
   }
 
   h3 {
     color: var(--diep);
     font-size: 13pt;
-    margin: 8mm 0 3mm 0;
+    margin: 7mm 0 3mm 0;
+    font-weight: 700;
+    page-break-after: avoid;
+  }
+
+  p { margin-bottom: 3mm; }
+  p + p { margin-top: 2mm; }
+
+  /* ========== STAP-BLOKKEN ========== */
+  .step {
+    page-break-inside: avoid;
+    margin: 8mm 0;
+  }
+
+  .step-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 6mm;
+    margin-bottom: 5mm;
+    page-break-after: avoid;
   }
 
   .step-num {
-    display: inline-block;
+    flex-shrink: 0;
+    width: 16mm;
+    height: 16mm;
     background: var(--paars);
     color: #fff;
-    width: 9mm;
-    height: 9mm;
-    text-align: center;
-    line-height: 9mm;
     border-radius: 50%;
-    font-weight: 700;
-    margin-right: 4mm;
-    font-size: 11pt;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22pt;
+    font-weight: 800;
+    line-height: 1;
+    box-shadow: 0 2px 6px rgba(91, 45, 138, 0.25);
   }
 
-  ul, ol { padding-left: 7mm; }
-  li { margin-bottom: 1.5mm; }
+  .step-meta {
+    flex: 1;
+    padding-top: 1.5mm;
+  }
 
+  .step-eyebrow {
+    color: var(--muted);
+    font-size: 8pt;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 1mm;
+  }
+
+  .step-title {
+    color: var(--diep);
+    font-size: 16pt;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0;
+  }
+
+  .step-time {
+    color: var(--paars);
+    font-size: 9pt;
+    font-weight: 600;
+    background: var(--offwit);
+    padding: 1mm 3mm;
+    border-radius: 11mm;
+    display: inline-block;
+    margin-top: 2mm;
+  }
+
+  .step-body {
+    padding-left: 22mm;
+  }
+
+  .substep {
+    display: flex;
+    gap: 4mm;
+    margin-bottom: 3mm;
+    page-break-inside: avoid;
+  }
+
+  .substep-num {
+    flex-shrink: 0;
+    width: 6mm;
+    height: 6mm;
+    background: var(--offwit-dark);
+    color: var(--paars);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 9pt;
+    font-weight: 700;
+    margin-top: 0.5mm;
+  }
+
+  .substep-content {
+    flex: 1;
+  }
+
+  .substep-content strong {
+    color: var(--diep);
+    font-weight: 700;
+  }
+
+  /* ========== CALLOUTS ========== */
   .callout {
     background: var(--offwit);
     border-left: 4px solid var(--goud);
     padding: 5mm 7mm;
     margin: 6mm 0;
-    font-size: 10.5pt;
+    border-radius: 0 3px 3px 0;
+    page-break-inside: avoid;
   }
 
-  .callout .label {
+  .callout .callout-label {
     color: var(--goud);
     font-weight: 700;
-    font-size: 9pt;
-    letter-spacing: 0.1em;
+    font-size: 8pt;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
     margin-bottom: 2mm;
     display: block;
   }
 
-  code {
-    background: var(--offwit);
-    color: var(--diep);
-    padding: 1px 4px;
-    border-radius: 3px;
-    font-family: "SF Mono", Menlo, monospace;
-    font-size: 10pt;
-  }
+  .callout p { margin: 0; font-size: 10pt; }
 
-  pre {
-    background: var(--offwit);
-    border-left: 3px solid var(--paars);
-    padding: 4mm 5mm;
-    border-radius: 2px;
-    overflow-x: auto;
-    font-family: "SF Mono", Menlo, monospace;
+  .done-as {
+    background: linear-gradient(135deg, var(--offwit) 0%, var(--offwit-dark) 100%);
+    border-left: 4px solid var(--paars);
+    padding: 4mm 6mm;
+    margin: 4mm 0 2mm 22mm;
+    border-radius: 0 3px 3px 0;
     font-size: 9.5pt;
-    line-height: 1.45;
+    page-break-inside: avoid;
   }
 
+  .done-as strong {
+    color: var(--paars);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 8pt;
+    letter-spacing: 0.2em;
+    display: block;
+    margin-bottom: 1mm;
+  }
+
+  /* ========== KAARTEN ========== */
   .grid-2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 6mm;
-    margin: 4mm 0;
+    gap: 5mm;
+    margin: 5mm 0;
+    page-break-inside: avoid;
+  }
+
+  .grid-4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4mm;
+    margin: 5mm 0;
+    page-break-inside: avoid;
   }
 
   .card {
-    background: var(--offwit);
+    background: #fff;
+    border: 1px solid var(--line);
     padding: 5mm;
-    border-radius: 3px;
+    border-radius: 4px;
+    page-break-inside: avoid;
   }
 
-  .card .title {
+  .card .card-tag {
     color: var(--paars);
+    font-size: 8pt;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
     font-weight: 700;
-    font-size: 11pt;
     margin-bottom: 2mm;
   }
 
-  .muted { color: var(--muted); font-size: 9.5pt; }
-
-  hr {
-    border: none;
-    border-top: 1px solid #e3dde9;
-    margin: 8mm 0;
+  .card .card-title {
+    color: var(--diep);
+    font-weight: 700;
+    font-size: 11pt;
+    margin-bottom: 2mm;
+    line-height: 1.25;
   }
 
-  .page-break { page-break-before: always; }
-
-  .checklist li {
-    list-style: none;
-    padding-left: 0;
-    margin-left: -7mm;
-    margin-bottom: 2.5mm;
+  .card .card-body {
+    color: var(--muted);
+    font-size: 9.5pt;
+    line-height: 1.5;
   }
-  .checklist li::before {
-    content: "☐ ";
+
+  .card.accent { border-color: var(--paars); border-width: 1px; }
+  .card.accent::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: var(--paars);
+    margin: -5mm -5mm 5mm -5mm;
+    border-radius: 4px 4px 0 0;
+  }
+
+  /* ========== TIMELINE ========== */
+  .timeline {
+    background: var(--offwit);
+    padding: 6mm 8mm;
+    border-radius: 4px;
+    margin: 5mm 0;
+    page-break-inside: avoid;
+  }
+
+  .timeline-row {
+    display: flex;
+    align-items: center;
+    gap: 4mm;
+    padding: 2.5mm 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .timeline-row:last-child { border-bottom: none; }
+
+  .timeline-cadence {
+    flex-shrink: 0;
+    width: 28mm;
     color: var(--paars);
     font-weight: 700;
-    margin-right: 2mm;
+    font-size: 10pt;
+  }
+
+  .timeline-time {
+    flex-shrink: 0;
+    color: var(--muted);
+    font-size: 9pt;
+    width: 18mm;
+  }
+
+  .timeline-action {
+    flex: 1;
+    font-size: 10pt;
+  }
+
+  /* ========== CHECKLIST ========== */
+  .checklist {
+    background: var(--offwit);
+    border: 1px solid var(--line);
+    padding: 6mm 8mm;
+    border-radius: 4px;
+    margin: 6mm 0;
+    page-break-inside: avoid;
+  }
+
+  .checklist-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 4mm;
+    padding: 2mm 0;
+    font-size: 10pt;
+  }
+
+  .checkbox {
+    flex-shrink: 0;
+    width: 4mm;
+    height: 4mm;
+    border: 2px solid var(--paars);
+    border-radius: 1mm;
+    margin-top: 1mm;
+  }
+
+  /* ========== UTILITIES ========== */
+  .page-break { page-break-before: always; }
+  .no-break { page-break-inside: avoid; }
+  .muted { color: var(--muted); font-size: 9pt; }
+
+  code {
+    background: var(--offwit);
+    color: var(--diep);
+    padding: 0.5mm 2mm;
+    border-radius: 2px;
+    font-family: "SF Mono", "Menlo", monospace;
+    font-size: 9pt;
+  }
+
+  ul.bullet, ol.bullet { padding-left: 5mm; margin: 2mm 0; }
+  ul.bullet li, ol.bullet li { margin-bottom: 1.5mm; }
+
+  /* ========== TOC ========== */
+  .toc {
+    background: var(--offwit);
+    padding: 8mm;
+    border-radius: 4px;
+    margin: 6mm 0 10mm 0;
+    page-break-inside: avoid;
+  }
+
+  .toc-row {
+    display: flex;
+    align-items: baseline;
+    gap: 3mm;
+    padding: 2mm 0;
+    border-bottom: 1px dotted var(--line);
+    font-size: 10pt;
+  }
+
+  .toc-row:last-child { border-bottom: none; }
+
+  .toc-num {
+    flex-shrink: 0;
+    width: 8mm;
+    color: var(--paars);
+    font-weight: 700;
+  }
+
+  .toc-title {
+    flex: 1;
+    color: var(--donker);
+  }
+
+  .toc-time {
+    color: var(--muted);
+    font-size: 9pt;
+  }
+
+  /* ========== SECTION DIVIDER ========== */
+  .section-tag {
+    display: inline-block;
+    background: var(--diep);
+    color: #fff;
+    padding: 1mm 4mm;
+    font-size: 8pt;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 2mm;
+    margin-bottom: 3mm;
   }
 </style>
 </head>
 <body>
 
-<!-- COVER -->
+<!-- ========================================== -->
+<!-- COVER                                       -->
+<!-- ========================================== -->
 <div class="cover">
-  <div class="label">CXM-ICT — Workshop AI &amp; SKILLS</div>
+  <div class="cover-brand">CXM-ICT × Twist Marketing</div>
+
+  <div class="cover-tag">Take-home document</div>
+
   <h1>Stappenplan<br>na de workshop</h1>
-  <div class="sub">
-    Hoe je vanaf morgen één LinkedIn-post in 5 minuten in plaats van 2 uur publiceert, in jouw eigen stem.
+
+  <div class="cover-sub">
+    Hoe je vanaf morgen één LinkedIn-post in vijf minuten in plaats van twee uur publiceert. In jouw eigen stem.
   </div>
-  <div class="footer">
-    6 mei 2026 — door Michael Doomen &amp; Joost van der Heijden<br>
-    Take-home document, behorend bij course-skills repo
+
+  <div class="cover-meta">
+    <span class="row"><span class="label">Workshop</span>AI &amp; SKILLS</span>
+    <span class="row"><span class="label">Datum</span>6 mei 2026</span>
+    <span class="row"><span class="label">Door</span>Michael Doomen &amp; Joost van der Heijden</span>
+    <span class="row"><span class="label">Repo</span>github.com/cxm-ict/course-skills</span>
   </div>
 </div>
 
-<!-- INHOUD -->
-<h2>Waarom dit document</h2>
+<!-- ========================================== -->
+<!-- INHOUDSOPGAVE                               -->
+<!-- ========================================== -->
+<div class="section-head">
+  <div class="section-eyebrow">Wat zit erin</div>
+  <h2>Vier stappen, één doel</h2>
+</div>
 
 <p>
-  Tijdens de workshop heb je in 90 minuten gezien hoe je je eigen voice in een SKILL vangt en hoe vier skills samen één LinkedIn-post produceren. Dit document helpt je morgen, volgende week en over een maand om er echt iets mee te doen.
+  Tijdens de workshop zag je in 90 minuten hoe je je voice in een SKILL vangt en hoe vier skills samen één LinkedIn-post produceren. Dit document helpt je het morgen ook echt te doen.
 </p>
 
 <p>
-  Geen filler. Geen "in deze snel veranderende wereld". Vier stappen die je in volgorde uitvoert. Per stap: wat je doet, hoeveel tijd het kost, en hoe je weet dat je klaar bent.
+  Geen filler. Geen marketingplaatjes. Vier stappen die je in volgorde uitvoert, met per stap precies wat je doet, hoeveel tijd het kost, en hoe je weet dat je klaar bent.
 </p>
+
+<div class="toc">
+  <div class="toc-row">
+    <div class="toc-num">01</div>
+    <div class="toc-title">Maak je voice-skill af</div>
+    <div class="toc-time">30 min</div>
+  </div>
+  <div class="toc-row">
+    <div class="toc-num">02</div>
+    <div class="toc-title">Bouw je content-team in één chat</div>
+    <div class="toc-time">60 min</div>
+  </div>
+  <div class="toc-row">
+    <div class="toc-num">03</div>
+    <div class="toc-title">Post de eerste week drie keer</div>
+    <div class="toc-time">30 min per post</div>
+  </div>
+  <div class="toc-row">
+    <div class="toc-num">04</div>
+    <div class="toc-title">Verfijn je skills doorlopend</div>
+    <div class="toc-time">10 min per week</div>
+  </div>
+</div>
 
 <div class="callout">
-  <span class="label">Tijd-investering</span>
-  Stap 1: 30 min · Stap 2: 60 min · Stap 3: 30 min · Stap 4: doorlopend, 30 min per post.
-  <br>Totaal eerste week: ongeveer 2 uur. Vanaf week twee: 30 min per post.
+  <span class="callout-label">Tijd-investering eerste week</span>
+  <p>Stap 1: 30 min · Stap 2: 60 min · Stap 3: drie keer 30 min posten. Totaal ongeveer 3 uur. Vanaf week 2: 30 min per post.</p>
 </div>
 
-<h2>Stap 1 — Maak je voice-skill af<span class="muted"> · 30 minuten</span></h2>
+<!-- ========================================== -->
+<!-- STAP 1                                      -->
+<!-- ========================================== -->
+<div class="step page-break">
+  <div class="step-header">
+    <div class="step-num">1</div>
+    <div class="step-meta">
+      <div class="step-eyebrow">Stap één</div>
+      <h2 class="step-title">Maak je voice-skill af</h2>
+      <span class="step-time">30 minuten</span>
+    </div>
+  </div>
 
-<p>
-  In blok 3 ben je begonnen aan je <code>linkedin-stijl-template</code>. Waarschijnlijk heb je een paar invul-vakken nog leeg. Maak ze nu af.
-</p>
+  <div class="step-body">
+    <p>
+      In blok 3 ben je begonnen aan je <code>linkedin-stijl-template</code>. Waarschijnlijk staan er nog invul-vakken leeg. Maak ze vandaag af.
+    </p>
 
-<h3><span class="step-num">1</span>Plak 5 eigen posts (niet 3)</h3>
-<p>
-  Drie posts is genoeg om te beginnen, vijf is genoeg om jouw stem boven die van Claude te krijgen. Kies posts uit verschillende dagen en met verschillende soorten inhoud (een verhaal, een mening, een case). Niet allemaal hetzelfde type.
-</p>
+    <h3>Wat je doet</h3>
 
-<h3><span class="step-num">2</span>Schrijf de "wat ik NIET doe"-lijst grondig</h3>
-<p>
-  Dit is de belangrijkste sectie. Schrijf hier alles op wat anderen wel doen en jij niet. Clichés, formules, woorden, hooks. Hoe scherper deze lijst, hoe meer je posts straks naar jou voelen.
-</p>
+    <div class="substep">
+      <div class="substep-num">1</div>
+      <div class="substep-content">
+        <strong>Plak vijf eigen posts (geen drie).</strong> Drie is genoeg om te beginnen, vijf is genoeg om jouw stem boven die van Claude te krijgen. Kies posts uit verschillende dagen en met verschillende soorten inhoud (een verhaal, een mening, een case). Niet allemaal hetzelfde type.
+      </div>
+    </div>
 
-<h3><span class="step-num">3</span>Test op een onbekend onderwerp</h3>
-<p>
-  Open Claude, vraag: "Schrijf een LinkedIn-post over [onderwerp dat je nog nooit hebt behandeld] in mijn stijl, gebruik mijn voice-skill." Lees de output hardop. Schuurt iets? Pas de skill aan. Test opnieuw.
-</p>
+    <div class="substep">
+      <div class="substep-num">2</div>
+      <div class="substep-content">
+        <strong>Schrijf de "wat ik NIET doe"-lijst grondig.</strong> Dit is de belangrijkste sectie. Schrijf alles op wat anderen wel doen en jij niet. Clichés, formules, woorden, hooks. Hoe scherper deze lijst, hoe meer je posts naar jou voelen.
+      </div>
+    </div>
 
-<div class="callout">
-  <span class="label">Klaar als</span>
-  Je hebt 5 posts geplakt, de "niet-doen"-lijst heeft minimaal 6 punten, en de testpost voelt minstens 80% als jij.
+    <div class="substep">
+      <div class="substep-num">3</div>
+      <div class="substep-content">
+        <strong>Test op een onbekend onderwerp.</strong> Open Claude, vraag: "Schrijf een LinkedIn-post over [onderwerp dat je nog nooit hebt behandeld] in mijn stijl, gebruik mijn voice-skill." Lees de output hardop. Schuurt iets? Pas de skill aan. Test opnieuw.
+      </div>
+    </div>
+  </div>
+
+  <div class="done-as">
+    <strong>Klaar als</strong>
+    Je hebt vijf posts geplakt, de "niet-doen"-lijst heeft minimaal zes punten, en de testpost voelt voor minstens 80% als jij.
+  </div>
 </div>
 
-<h2 class="page-break">Stap 2 — Bouw je content-team in 4 chats<span class="muted"> · 60 minuten</span></h2>
+<!-- ========================================== -->
+<!-- STAP 2                                      -->
+<!-- ========================================== -->
+<div class="step page-break">
+  <div class="step-header">
+    <div class="step-num">2</div>
+    <div class="step-meta">
+      <div class="step-eyebrow">Stap twee</div>
+      <h2 class="step-title">Bouw je content-team in één chat</h2>
+      <span class="step-time">60 minuten</span>
+    </div>
+  </div>
 
-<p>
-  Open vier nieuwe Claude-chats in tabbladen, geef ze elk hun eigen skill. Dit is je content-team.
-</p>
+  <div class="step-body">
+    <p>
+      Open één Claude.ai chat met zes skills geladen. Eén orchestrator stuurt vier specialisten aan op basis van jouw voice. Eén prompt levert een complete post.
+    </p>
+
+    <div class="grid-4">
+      <div class="card">
+        <div class="card-tag">Skill 1</div>
+        <div class="card-title">linkedin-content-team</div>
+        <div class="card-body">De orchestrator. Houdt het stappenplan vast en roept de andere vier in volgorde aan.</div>
+      </div>
+      <div class="card">
+        <div class="card-tag">Skill 2</div>
+        <div class="card-title">linkedin-research-agent</div>
+        <div class="card-body">Vindt drie haakjes (angles) over het onderwerp, met bronnen.</div>
+      </div>
+      <div class="card">
+        <div class="card-tag">Skill 3</div>
+        <div class="card-title">linkedin-schrijf-agent</div>
+        <div class="card-body">Schrijft de post-tekst in jouw stem. Werkt samen met je voice-skill.</div>
+      </div>
+      <div class="card">
+        <div class="card-tag">Skill 4</div>
+        <div class="card-title">linkedin-visueel-agent</div>
+        <div class="card-body">Bedenkt twee tot drie visuele concepten met onderbouwing.</div>
+      </div>
+      <div class="card">
+        <div class="card-tag">Skill 5</div>
+        <div class="card-title">linkedin-polish-agent</div>
+        <div class="card-body">Voegt hashtags, CTA en posttijd toe. Klaar om te publiceren.</div>
+      </div>
+      <div class="card accent">
+        <div class="card-tag">Skill 6</div>
+        <div class="card-title">mijn-linkedin-stijl</div>
+        <div class="card-body">Jouw eigen voice-skill uit stap 1. De andere skills bouwen hierop.</div>
+      </div>
+    </div>
+
+    <h3>Wat je doet</h3>
+
+    <div class="substep">
+      <div class="substep-num">1</div>
+      <div class="substep-content">
+        <strong>Run één post end-to-end.</strong> Eén prompt: <em>"Rol mijn content team uit voor het onderwerp [X]."</em> De orchestrator doorloopt de vier stappen. De eerste keer duurt het 5-10 minuten omdat je de output leest en bijstuurt. Vanaf de tweede post zit je rond de 3.
+      </div>
+    </div>
+
+    <div class="substep">
+      <div class="substep-num">2</div>
+      <div class="substep-content">
+        <strong>Sla de chat op als bookmark.</strong> In Claude.ai krijgt elke chat een unieke URL. Bookmark die. Volgende week open je je content-team chat in één klik en vraag je een nieuwe post aan.
+      </div>
+    </div>
+  </div>
+
+  <div class="done-as">
+    <strong>Klaar als</strong>
+    Je hebt één post end-to-end via de orchestrator gehaald, de output staat in concept op LinkedIn (nog niet posten), en je chat-URL is gebookmarked.
+  </div>
+</div>
+
+<!-- ========================================== -->
+<!-- STAP 3                                      -->
+<!-- ========================================== -->
+<div class="step page-break">
+  <div class="step-header">
+    <div class="step-num">3</div>
+    <div class="step-meta">
+      <div class="step-eyebrow">Stap drie</div>
+      <h2 class="step-title">Post de eerste week drie keer</h2>
+      <span class="step-time">30 minuten per post</span>
+    </div>
+  </div>
+
+  <div class="step-body">
+    <p>
+      Volume in week 1 is belangrijker dan perfectie. Post drie keer in week 1, gebruik elke keer het volledige content-team. Wat je leert:
+    </p>
+
+    <ul class="bullet">
+      <li>Welke haakjes uit de research-agent passen bij jouw stem en welke niet</li>
+      <li>Welke aanpassingen aan de schrijf-agent je voice scherper maken</li>
+      <li>Welk type visual werkt voor jouw doelgroep</li>
+      <li>Welke CTA-stijlen reactie krijgen en welke niet</li>
+    </ul>
+
+    <p>
+      Houd een simpel logboek bij (notitie of spreadsheet) met per post: de gekozen angle, de gebruikte skill-versie, het type visual, de hoeveelheid reacties na 24 uur. Na vijf posts zie je patronen.
+    </p>
+  </div>
+
+  <div class="done-as">
+    <strong>Klaar als</strong>
+    Je hebt drie posts gepubliceerd in week 1, je weet welke van de zes skills je het meest hebt aangepast, en je hebt minimaal één reactie per post die je niet voorzag.
+  </div>
+</div>
+
+<!-- ========================================== -->
+<!-- STAP 4                                      -->
+<!-- ========================================== -->
+<div class="step page-break">
+  <div class="step-header">
+    <div class="step-num">4</div>
+    <div class="step-meta">
+      <div class="step-eyebrow">Stap vier</div>
+      <h2 class="step-title">Verfijn je skills doorlopend</h2>
+      <span class="step-time">10 minuten per week</span>
+    </div>
+  </div>
+
+  <div class="step-body">
+    <p>
+      Skills zijn geen software die je één keer schrijft en daarna laat staan. Ze evolueren mee met hoe jij je publiek leert kennen.
+    </p>
+
+    <div class="timeline">
+      <div class="timeline-row">
+        <div class="timeline-cadence">Wekelijks</div>
+        <div class="timeline-time">10 min</div>
+        <div class="timeline-action">Vrijdag: lees je drie posts terug. Wat schuurde aan de output van de schrijf-agent? Voeg toe aan "wat ik niet doe" in je voice-skill. Welke hook-types werkten? Voeg toe aan voorbeelden.</div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-cadence">Maandelijks</div>
+        <div class="timeline-time">30 min</div>
+        <div class="timeline-action">Eerste vrijdag: loop alle skills door, kijk welke je niet gebruikte en waarom. Vraag Claude: "Wat zijn drie manieren waarop ik mijn voice-skill scherper kan maken op basis van mijn laatste 12 posts?"</div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-cadence">Per kwartaal</div>
+        <div class="timeline-time">60 min</div>
+        <div class="timeline-action">Bouw een nieuwe variant. Bijvoorbeeld een <code>linkedin-carousel-agent</code> of een <code>linkedin-newsletter-agent</code>. Deel ze met je netwerk, zoals MD en Joost dat doen.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========================================== -->
+<!-- WAARSCHUWINGEN + TROUBLESHOOTING            -->
+<!-- ========================================== -->
+<div class="page-break"></div>
+
+<div class="section-head">
+  <div class="section-eyebrow">Wat we tijdens de workshop niet hardop zeiden</div>
+  <h2>Vier waarschuwingen</h2>
+</div>
 
 <div class="grid-2">
   <div class="card">
-    <div class="title">Tab 1 — Research</div>
-    Skill: <code>linkedin-research-agent</code><br>
-    Vraag: "Geef me 3 LinkedIn-haakjes over [jouw vakgebied] van deze week."
+    <div class="card-title">Je voice-skill wordt nooit "klaar"</div>
+    <div class="card-body">Dat is geen bug, dat is het ontwerp. Stop niet met aanpassen.</div>
   </div>
   <div class="card">
-    <div class="title">Tab 2 — Schrijven</div>
-    Skill: <code>linkedin-schrijf-agent</code> + jouw voice-skill<br>
-    Vraag: "Schrijf een post over haakje 2 in mijn stijl."
+    <div class="card-title">Niet elk haakje verdient een post</div>
+    <div class="card-body">De research-agent levert er drie omdat je er soms nul zal kiezen. Dat is goed.</div>
   </div>
   <div class="card">
-    <div class="title">Tab 3 — Visueel</div>
-    Skill: <code>linkedin-visueel-agent</code><br>
-    Vraag: "Bedenk 2-3 visuele concepten voor deze post."
+    <div class="card-title">De polish-agent is geen distributie-strategie</div>
+    <div class="card-body">Posttijd is een richting, geen wet. Volume en consistentie wegen zwaarder.</div>
   </div>
   <div class="card">
-    <div class="title">Tab 4 — Polish</div>
-    Skill: <code>linkedin-polish-agent</code><br>
-    Vraag: "Maak deze post publicatie-klaar."
+    <div class="card-title">AI maakt je niet creatiever</div>
+    <div class="card-body">Het maakt je consequenter. Creativiteit zit in jouw hoofd, niet in de skill.</div>
   </div>
 </div>
 
-<h3><span class="step-num">1</span>Run één post end-to-end</h3>
-<p>
-  Begin in tab 1, kopieer een haakje naar tab 2, kopieer de post naar tab 3 en 4. Houd je tijd bij. De eerste keer duurt het 45 minuten omdat je de workflow leert. Vanaf de tweede post zit je rond de 15.
-</p>
-
-<h3><span class="step-num">2</span>Sla deze tabs op als bookmark-set</h3>
-<p>
-  In Chrome: rechtermuisknop op een tab, "Bookmark all tabs". Volgende week open je de hele set in één klik.
-</p>
-
-<div class="callout">
-  <span class="label">Klaar als</span>
-  Je hebt één post end-to-end door alle vier tabs gehaald en de output staat in concept op LinkedIn (nog niet posten).
+<div class="section-head" style="margin-top: 12mm;">
+  <div class="section-eyebrow">Wat te doen als het niet werkt</div>
+  <h2>Vier veelvoorkomende blokkades</h2>
 </div>
-
-<h2>Stap 3 — Post de eerste week 3 keer<span class="muted"> · 30 minuten per post</span></h2>
-
-<p>
-  Volume in week 1 is belangrijker dan perfectie. Post 3 keer in week 1, gebruik elke keer het volledige content-team. Wat je leert:
-</p>
-
-<ul>
-  <li>Welke haakjes uit de research-agent passen bij jouw stem en welke niet</li>
-  <li>Welke aanpassingen aan de schrijf-agent je voice scherper maken</li>
-  <li>Welk type visual werkt voor jouw doelgroep</li>
-  <li>Welke CTA-stijlen reactie krijgen en welke niet</li>
-</ul>
-
-<p>
-  Houd een simpel logboek bij (notitie of spreadsheet) met per post: de gekozen angle, de gebruikte skill-versie, het type visual, de hoeveelheid reacties na 24 uur. Na 5 posts zie je patronen.
-</p>
-
-<div class="callout">
-  <span class="label">Klaar als</span>
-  Je hebt 3 posts gepubliceerd in week 1, je weet welke van de 4 skills je het meest hebt aangepast, en je hebt minimaal 1 reactie per post die je niet voorzag.
-</div>
-
-<h2 class="page-break">Stap 4 — Verfijn je skills doorlopend</h2>
-
-<p>
-  Skills zijn geen software die je één keer schrijft en daarna laat staan. Ze evolueren mee met hoe jij je publiek leert kennen.
-</p>
-
-<h3>Wekelijks (10 min, vrijdag)</h3>
-<ul>
-  <li>Lees je 3 posts van die week opnieuw</li>
-  <li>Wat schuurde aan de output van de schrijf-agent? Voeg toe aan "wat ik niet doe" in je voice-skill</li>
-  <li>Welke hook-types werkten goed? Voeg ze toe aan je voorbeelden</li>
-</ul>
-
-<h3>Maandelijks (30 min, eerste vrijdag)</h3>
-<ul>
-  <li>Loop alle 7 skills door, kijk welke je niet gebruikte en waarom</li>
-  <li>Vraag aan Claude: "Wat zijn 3 manieren waarop ik mijn voice-skill scherper kan maken op basis van mijn laatste 12 posts?"</li>
-  <li>Update je posttijd-strategie als je daar nieuwe data over hebt</li>
-</ul>
-
-<h3>Per kwartaal (1 uur)</h3>
-<ul>
-  <li>Bouw een nieuwe variant: bijvoorbeeld een <code>linkedin-carousel-agent</code> of een <code>linkedin-newsletter-agent</code></li>
-  <li>Deel ze met je netwerk, zoals Michael en Joost dat doen</li>
-</ul>
-
-<h2>Vier waarschuwingen die we tijdens de workshop niet hardop zeiden</h2>
-
-<ul>
-  <li><strong>Je voice-skill wordt nooit "klaar".</strong> Dat is geen bug, dat is het ontwerp. Stop niet met aanpassen.</li>
-  <li><strong>Niet elk haakje verdient een post.</strong> De research-agent levert 3 omdat je er soms 0 zal kiezen. Dat is goed.</li>
-  <li><strong>De polish-agent is geen distributie-strategie.</strong> Posttijd is een richting, geen wet. Volume en consistentie wegen zwaarder.</li>
-  <li><strong>AI maakt je niet creatiever.</strong> Het maakt je consequenter. Creativiteit zit in jouw hoofd, niet in de skill.</li>
-</ul>
-
-<h2>Wat te doen als het niet werkt</h2>
 
 <div class="grid-2">
   <div class="card">
-    <div class="title">Skill triggert niet</div>
-    Check de description in de YAML frontmatter. Voeg jouw exacte trigger-zin toe.
+    <div class="card-title">Skill triggert niet</div>
+    <div class="card-body">Check de description in de YAML frontmatter. Voeg jouw exacte trigger-zin toe.</div>
   </div>
   <div class="card">
-    <div class="title">Output voelt niet als jou</div>
-    Voeg minstens 2 extra voorbeeldposts toe en breid de "niet-doen"-lijst uit.
+    <div class="card-title">Output voelt niet als jou</div>
+    <div class="card-body">Voeg minstens twee extra voorbeeldposts toe en breid de "niet-doen"-lijst uit.</div>
   </div>
   <div class="card">
-    <div class="title">Posts krijgen geen engagement</div>
-    Probleem zit niet in de skill. Probeer een ander hook-type of een andere posttijd.
+    <div class="card-title">Posts krijgen geen engagement</div>
+    <div class="card-body">Probleem zit niet in de skill. Probeer een ander hook-type of een andere posttijd.</div>
   </div>
   <div class="card">
-    <div class="title">Je doet het niet</div>
-    Plan elke week een vast moment van 30 min. Zonder slot doet niemand het.
+    <div class="card-title">Je doet het niet</div>
+    <div class="card-body">Plan elke week een vast moment van 30 min. Zonder slot doet niemand het.</div>
   </div>
 </div>
 
-<h2>Vraag of vastgelopen?</h2>
+<!-- ========================================== -->
+<!-- AFSLUITING + CHECKLIST                      -->
+<!-- ========================================== -->
+<div class="page-break"></div>
+
+<div class="section-head">
+  <div class="section-eyebrow">Eerste week op de rails</div>
+  <h2>Checklist</h2>
+</div>
 
 <p>
-  DM Michael of Joost via LinkedIn, of stuur een mail naar <code>info@cxm-ict.com</code>. We lezen alles, beantwoorden de meeste binnen 48 uur.
+  Druk dit blokje af, scheur uit, plak naast je laptop. Acht vinkjes en je hebt voet aan de grond.
 </p>
 
-<div class="callout">
-  <span class="label">Repo</span>
-  Alle skills, deze PDF, en updates: <code>github.com/cxm-ict/course-skills</code>
+<div class="checklist">
+  <div class="checklist-item"><div class="checkbox"></div>Voice-skill afgemaakt met vijf posts en uitgebreide "niet-doen"-lijst</div>
+  <div class="checklist-item"><div class="checkbox"></div>Voice-skill getest op onbekend onderwerp en aangepast</div>
+  <div class="checklist-item"><div class="checkbox"></div>Eén Claude-chat met alle zes skills geladen, gebookmarked</div>
+  <div class="checklist-item"><div class="checkbox"></div>Eerste post end-to-end via orchestrator: <em>"rol mijn content team uit voor [X]"</em></div>
+  <div class="checklist-item"><div class="checkbox"></div>Post 1 gepubliceerd, logboek-regel ingevuld</div>
+  <div class="checklist-item"><div class="checkbox"></div>Post 2 gepubliceerd, logboek-regel ingevuld</div>
+  <div class="checklist-item"><div class="checkbox"></div>Post 3 gepubliceerd, logboek-regel ingevuld</div>
+  <div class="checklist-item"><div class="checkbox"></div>Eerste vrijdag-ritueel gedaan (10 min review)</div>
 </div>
 
-<h2>Checklist voor de eerste week</h2>
+<div class="callout" style="margin-top: 12mm;">
+  <span class="callout-label">Vraag of vastgelopen?</span>
+  <p>DM Michael of Joost via LinkedIn, of stuur een mail naar <code>info@cxm-ict.com</code>. We lezen alles, beantwoorden de meeste binnen 48 uur.</p>
+</div>
 
-<ul class="checklist">
-  <li>Voice-skill afgemaakt met 5 posts en uitgebreide "niet-doen"-lijst</li>
-  <li>Voice-skill getest op onbekend onderwerp en aangepast</li>
-  <li>4 Claude-tabs als bookmark-set opgeslagen</li>
-  <li>Eerste post end-to-end door alle 4 skills gehaald</li>
-  <li>Post 1 gepubliceerd, logboek-regel ingevuld</li>
-  <li>Post 2 gepubliceerd, logboek-regel ingevuld</li>
-  <li>Post 3 gepubliceerd, logboek-regel ingevuld</li>
-  <li>Eerste vrijdag-ritueel gedaan (10 min review)</li>
-</ul>
+<div class="callout">
+  <span class="callout-label">Repo</span>
+  <p>Alle skills, deze PDF, en updates: <code>github.com/cxm-ict/course-skills</code></p>
+</div>
 
-<p class="muted" style="margin-top: 8mm;">
-  Versie 1.0, 6 mei 2026. CXM-ICT.
+<p class="muted" style="margin-top: 14mm; text-align: center;">
+  Versie 1.1 · 6 mei 2026 · CXM-ICT
 </p>
 
 </body>
