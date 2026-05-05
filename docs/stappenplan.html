@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<title>Stappenplan na de workshop - Workshop AI &amp; SKILLS</title>
+<style>
+  @page {
+    size: A4;
+    margin: 18mm 18mm 22mm 18mm;
+    @bottom-center {
+      content: "CXM-ICT | Workshop AI & SKILLS | 6 mei 2026 | pagina " counter(page) " van " counter(pages);
+      font-family: Helvetica, Arial, sans-serif;
+      font-size: 9pt;
+      color: #6B5B7A;
+    }
+  }
+
+  :root {
+    --paars: #5B2D8A;
+    --diep: #2D1647;
+    --goud: #B8862C;
+    --offwit: #F8F5FB;
+    --donker: #1A1424;
+    --muted: #6B5B7A;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    font-family: Helvetica, Arial, sans-serif;
+    color: var(--donker);
+    line-height: 1.55;
+    font-size: 11pt;
+    margin: 0;
+  }
+
+  .cover {
+    background: var(--diep);
+    color: #fff;
+    padding: 90mm 18mm 30mm 18mm;
+    margin: -18mm -18mm 0 -18mm;
+    page-break-after: always;
+    height: 297mm;
+    position: relative;
+  }
+
+  .cover .label {
+    color: var(--goud);
+    font-size: 11pt;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 8mm;
+  }
+
+  .cover h1 {
+    font-size: 32pt;
+    line-height: 1.1;
+    margin: 0 0 6mm 0;
+    color: #fff;
+    font-weight: 700;
+  }
+
+  .cover .sub {
+    font-size: 14pt;
+    color: var(--offwit);
+    max-width: 130mm;
+  }
+
+  .cover .footer {
+    position: absolute;
+    bottom: 22mm;
+    left: 18mm;
+    right: 18mm;
+    color: var(--offwit);
+    font-size: 10pt;
+    border-top: 1px solid var(--paars);
+    padding-top: 6mm;
+  }
+
+  h2 {
+    color: var(--paars);
+    font-size: 18pt;
+    margin: 16mm 0 4mm 0;
+    border-bottom: 2px solid var(--paars);
+    padding-bottom: 2mm;
+  }
+
+  h3 {
+    color: var(--diep);
+    font-size: 13pt;
+    margin: 8mm 0 3mm 0;
+  }
+
+  .step-num {
+    display: inline-block;
+    background: var(--paars);
+    color: #fff;
+    width: 9mm;
+    height: 9mm;
+    text-align: center;
+    line-height: 9mm;
+    border-radius: 50%;
+    font-weight: 700;
+    margin-right: 4mm;
+    font-size: 11pt;
+  }
+
+  ul, ol { padding-left: 7mm; }
+  li { margin-bottom: 1.5mm; }
+
+  .callout {
+    background: var(--offwit);
+    border-left: 4px solid var(--goud);
+    padding: 5mm 7mm;
+    margin: 6mm 0;
+    font-size: 10.5pt;
+  }
+
+  .callout .label {
+    color: var(--goud);
+    font-weight: 700;
+    font-size: 9pt;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 2mm;
+    display: block;
+  }
+
+  code {
+    background: var(--offwit);
+    color: var(--diep);
+    padding: 1px 4px;
+    border-radius: 3px;
+    font-family: "SF Mono", Menlo, monospace;
+    font-size: 10pt;
+  }
+
+  pre {
+    background: var(--offwit);
+    border-left: 3px solid var(--paars);
+    padding: 4mm 5mm;
+    border-radius: 2px;
+    overflow-x: auto;
+    font-family: "SF Mono", Menlo, monospace;
+    font-size: 9.5pt;
+    line-height: 1.45;
+  }
+
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6mm;
+    margin: 4mm 0;
+  }
+
+  .card {
+    background: var(--offwit);
+    padding: 5mm;
+    border-radius: 3px;
+  }
+
+  .card .title {
+    color: var(--paars);
+    font-weight: 700;
+    font-size: 11pt;
+    margin-bottom: 2mm;
+  }
+
+  .muted { color: var(--muted); font-size: 9.5pt; }
+
+  hr {
+    border: none;
+    border-top: 1px solid #e3dde9;
+    margin: 8mm 0;
+  }
+
+  .page-break { page-break-before: always; }
+
+  .checklist li {
+    list-style: none;
+    padding-left: 0;
+    margin-left: -7mm;
+    margin-bottom: 2.5mm;
+  }
+  .checklist li::before {
+    content: "☐ ";
+    color: var(--paars);
+    font-weight: 700;
+    margin-right: 2mm;
+  }
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<div class="cover">
+  <div class="label">CXM-ICT — Workshop AI &amp; SKILLS</div>
+  <h1>Stappenplan<br>na de workshop</h1>
+  <div class="sub">
+    Hoe je vanaf morgen één LinkedIn-post in 5 minuten in plaats van 2 uur publiceert, in jouw eigen stem.
+  </div>
+  <div class="footer">
+    6 mei 2026 — door Michael Doomen &amp; Joost van der Heijden<br>
+    Take-home document, behorend bij course-skills repo
+  </div>
+</div>
+
+<!-- INHOUD -->
+<h2>Waarom dit document</h2>
+
+<p>
+  Tijdens de workshop heb je in 90 minuten gezien hoe je je eigen voice in een SKILL vangt en hoe vier skills samen één LinkedIn-post produceren. Dit document helpt je morgen, volgende week en over een maand om er echt iets mee te doen.
+</p>
+
+<p>
+  Geen filler. Geen "in deze snel veranderende wereld". Vier stappen die je in volgorde uitvoert. Per stap: wat je doet, hoeveel tijd het kost, en hoe je weet dat je klaar bent.
+</p>
+
+<div class="callout">
+  <span class="label">Tijd-investering</span>
+  Stap 1: 30 min · Stap 2: 60 min · Stap 3: 30 min · Stap 4: doorlopend, 30 min per post.
+  <br>Totaal eerste week: ongeveer 2 uur. Vanaf week twee: 30 min per post.
+</div>
+
+<h2>Stap 1 — Maak je voice-skill af<span class="muted"> · 30 minuten</span></h2>
+
+<p>
+  In blok 3 ben je begonnen aan je <code>linkedin-stijl-template</code>. Waarschijnlijk heb je een paar invul-vakken nog leeg. Maak ze nu af.
+</p>
+
+<h3><span class="step-num">1</span>Plak 5 eigen posts (niet 3)</h3>
+<p>
+  Drie posts is genoeg om te beginnen, vijf is genoeg om jouw stem boven die van Claude te krijgen. Kies posts uit verschillende dagen en met verschillende soorten inhoud (een verhaal, een mening, een case). Niet allemaal hetzelfde type.
+</p>
+
+<h3><span class="step-num">2</span>Schrijf de "wat ik NIET doe"-lijst grondig</h3>
+<p>
+  Dit is de belangrijkste sectie. Schrijf hier alles op wat anderen wel doen en jij niet. Clichés, formules, woorden, hooks. Hoe scherper deze lijst, hoe meer je posts straks naar jou voelen.
+</p>
+
+<h3><span class="step-num">3</span>Test op een onbekend onderwerp</h3>
+<p>
+  Open Claude, vraag: "Schrijf een LinkedIn-post over [onderwerp dat je nog nooit hebt behandeld] in mijn stijl, gebruik mijn voice-skill." Lees de output hardop. Schuurt iets? Pas de skill aan. Test opnieuw.
+</p>
+
+<div class="callout">
+  <span class="label">Klaar als</span>
+  Je hebt 5 posts geplakt, de "niet-doen"-lijst heeft minimaal 6 punten, en de testpost voelt minstens 80% als jij.
+</div>
+
+<h2 class="page-break">Stap 2 — Bouw je content-team in 4 chats<span class="muted"> · 60 minuten</span></h2>
+
+<p>
+  Open vier nieuwe Claude-chats in tabbladen, geef ze elk hun eigen skill. Dit is je content-team.
+</p>
+
+<div class="grid-2">
+  <div class="card">
+    <div class="title">Tab 1 — Research</div>
+    Skill: <code>linkedin-research-agent</code><br>
+    Vraag: "Geef me 3 LinkedIn-haakjes over [jouw vakgebied] van deze week."
+  </div>
+  <div class="card">
+    <div class="title">Tab 2 — Schrijven</div>
+    Skill: <code>linkedin-schrijf-agent</code> + jouw voice-skill<br>
+    Vraag: "Schrijf een post over haakje 2 in mijn stijl."
+  </div>
+  <div class="card">
+    <div class="title">Tab 3 — Visueel</div>
+    Skill: <code>linkedin-visueel-agent</code><br>
+    Vraag: "Bedenk 2-3 visuele concepten voor deze post."
+  </div>
+  <div class="card">
+    <div class="title">Tab 4 — Polish</div>
+    Skill: <code>linkedin-polish-agent</code><br>
+    Vraag: "Maak deze post publicatie-klaar."
+  </div>
+</div>
+
+<h3><span class="step-num">1</span>Run één post end-to-end</h3>
+<p>
+  Begin in tab 1, kopieer een haakje naar tab 2, kopieer de post naar tab 3 en 4. Houd je tijd bij. De eerste keer duurt het 45 minuten omdat je de workflow leert. Vanaf de tweede post zit je rond de 15.
+</p>
+
+<h3><span class="step-num">2</span>Sla deze tabs op als bookmark-set</h3>
+<p>
+  In Chrome: rechtermuisknop op een tab, "Bookmark all tabs". Volgende week open je de hele set in één klik.
+</p>
+
+<div class="callout">
+  <span class="label">Klaar als</span>
+  Je hebt één post end-to-end door alle vier tabs gehaald en de output staat in concept op LinkedIn (nog niet posten).
+</div>
+
+<h2>Stap 3 — Post de eerste week 3 keer<span class="muted"> · 30 minuten per post</span></h2>
+
+<p>
+  Volume in week 1 is belangrijker dan perfectie. Post 3 keer in week 1, gebruik elke keer het volledige content-team. Wat je leert:
+</p>
+
+<ul>
+  <li>Welke haakjes uit de research-agent passen bij jouw stem en welke niet</li>
+  <li>Welke aanpassingen aan de schrijf-agent je voice scherper maken</li>
+  <li>Welk type visual werkt voor jouw doelgroep</li>
+  <li>Welke CTA-stijlen reactie krijgen en welke niet</li>
+</ul>
+
+<p>
+  Houd een simpel logboek bij (notitie of spreadsheet) met per post: de gekozen angle, de gebruikte skill-versie, het type visual, de hoeveelheid reacties na 24 uur. Na 5 posts zie je patronen.
+</p>
+
+<div class="callout">
+  <span class="label">Klaar als</span>
+  Je hebt 3 posts gepubliceerd in week 1, je weet welke van de 4 skills je het meest hebt aangepast, en je hebt minimaal 1 reactie per post die je niet voorzag.
+</div>
+
+<h2 class="page-break">Stap 4 — Verfijn je skills doorlopend</h2>
+
+<p>
+  Skills zijn geen software die je één keer schrijft en daarna laat staan. Ze evolueren mee met hoe jij je publiek leert kennen.
+</p>
+
+<h3>Wekelijks (10 min, vrijdag)</h3>
+<ul>
+  <li>Lees je 3 posts van die week opnieuw</li>
+  <li>Wat schuurde aan de output van de schrijf-agent? Voeg toe aan "wat ik niet doe" in je voice-skill</li>
+  <li>Welke hook-types werkten goed? Voeg ze toe aan je voorbeelden</li>
+</ul>
+
+<h3>Maandelijks (30 min, eerste vrijdag)</h3>
+<ul>
+  <li>Loop alle 7 skills door, kijk welke je niet gebruikte en waarom</li>
+  <li>Vraag aan Claude: "Wat zijn 3 manieren waarop ik mijn voice-skill scherper kan maken op basis van mijn laatste 12 posts?"</li>
+  <li>Update je posttijd-strategie als je daar nieuwe data over hebt</li>
+</ul>
+
+<h3>Per kwartaal (1 uur)</h3>
+<ul>
+  <li>Bouw een nieuwe variant: bijvoorbeeld een <code>linkedin-carousel-agent</code> of een <code>linkedin-newsletter-agent</code></li>
+  <li>Deel ze met je netwerk, zoals Michael en Joost dat doen</li>
+</ul>
+
+<h2>Vier waarschuwingen die we tijdens de workshop niet hardop zeiden</h2>
+
+<ul>
+  <li><strong>Je voice-skill wordt nooit "klaar".</strong> Dat is geen bug, dat is het ontwerp. Stop niet met aanpassen.</li>
+  <li><strong>Niet elk haakje verdient een post.</strong> De research-agent levert 3 omdat je er soms 0 zal kiezen. Dat is goed.</li>
+  <li><strong>De polish-agent is geen distributie-strategie.</strong> Posttijd is een richting, geen wet. Volume en consistentie wegen zwaarder.</li>
+  <li><strong>AI maakt je niet creatiever.</strong> Het maakt je consequenter. Creativiteit zit in jouw hoofd, niet in de skill.</li>
+</ul>
+
+<h2>Wat te doen als het niet werkt</h2>
+
+<div class="grid-2">
+  <div class="card">
+    <div class="title">Skill triggert niet</div>
+    Check de description in de YAML frontmatter. Voeg jouw exacte trigger-zin toe.
+  </div>
+  <div class="card">
+    <div class="title">Output voelt niet als jou</div>
+    Voeg minstens 2 extra voorbeeldposts toe en breid de "niet-doen"-lijst uit.
+  </div>
+  <div class="card">
+    <div class="title">Posts krijgen geen engagement</div>
+    Probleem zit niet in de skill. Probeer een ander hook-type of een andere posttijd.
+  </div>
+  <div class="card">
+    <div class="title">Je doet het niet</div>
+    Plan elke week een vast moment van 30 min. Zonder slot doet niemand het.
+  </div>
+</div>
+
+<h2>Vraag of vastgelopen?</h2>
+
+<p>
+  DM Michael of Joost via LinkedIn, of stuur een mail naar <code>info@cxm-ict.com</code>. We lezen alles, beantwoorden de meeste binnen 48 uur.
+</p>
+
+<div class="callout">
+  <span class="label">Repo</span>
+  Alle skills, deze PDF, en updates: <code>github.com/cxm-ict/course-skills</code>
+</div>
+
+<h2>Checklist voor de eerste week</h2>
+
+<ul class="checklist">
+  <li>Voice-skill afgemaakt met 5 posts en uitgebreide "niet-doen"-lijst</li>
+  <li>Voice-skill getest op onbekend onderwerp en aangepast</li>
+  <li>4 Claude-tabs als bookmark-set opgeslagen</li>
+  <li>Eerste post end-to-end door alle 4 skills gehaald</li>
+  <li>Post 1 gepubliceerd, logboek-regel ingevuld</li>
+  <li>Post 2 gepubliceerd, logboek-regel ingevuld</li>
+  <li>Post 3 gepubliceerd, logboek-regel ingevuld</li>
+  <li>Eerste vrijdag-ritueel gedaan (10 min review)</li>
+</ul>
+
+<p class="muted" style="margin-top: 8mm;">
+  Versie 1.0, 6 mei 2026. CXM-ICT.
+</p>
+
+</body>
+</html>
