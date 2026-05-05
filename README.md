@@ -2,7 +2,7 @@
 
 Materiaal bij de **Workshop AI & SKILLS** van CXM-ICT, 6 mei 2026 voor Twist Marketing.
 
-Zeven skills die samen één workflow vormen: **van je eigen LinkedIn-stijl in kaart brengen tot één post in 5 minuten in plaats van 2 uur**.
+Acht skills die samen één workflow vormen: **van je eigen LinkedIn-stijl in kaart brengen tot één post in 3 minuten in plaats van 2 uur**.
 
 ---
 
@@ -10,7 +10,7 @@ Zeven skills die samen één workflow vormen: **van je eigen LinkedIn-stijl in k
 
 | # | Skill | Wat het doet | Voor welk blok |
 |---|-------|--------------|----------------|
-| 1 | `linkedin-stijl-prompt` | Een lange prompt die jouw 10 posts + 20 concurrent-posts analyseert en je voice in kaart brengt | Blok 1 (wow-demo) |
+| 1 | `linkedin-stijl-prompt` | Een lange prompt die jouw 10 posts + 20 concurrent-posts analyseert en je voice in kaart brengt | Blok 1 (live demo) |
 | 2 | `linkedin-stijl-skill` | Dezelfde analyse als opgeslagen SKILL met YAML frontmatter | Blok 2 (concept) |
 | 3 | `linkedin-stijl-template` | Werkblad waarmee jij in 30 minuten je eigen voice-skill bouwt | Blok 3 (zelf doen) |
 | 4 | `linkedin-research-agent` | Vindt 3 actuele haakjes (angles) over een onderwerp met bronnen | Blok 4 (multi-agent) |
@@ -49,13 +49,15 @@ Of, als je via Claude Code werkt: leg de hele map in `.claude/skills/` van je pr
 
 ### Stap 4 - Vraag iets dat de skill triggert
 
-Voorbeeld voor `linkedin-stijl-skill`:
+Voorbeeld voor `linkedin-stijl-skill` (jouw voice in kaart):
 
-> "Hier zijn 10 van mijn LinkedIn-posts en 20 van twee concurrenten. Analyseer mijn stijl en geef me adviezen."
+> "Hier zijn 7 van mijn LinkedIn-posts en 14 van twee concurrenten. Analyseer mijn stijl en geef me adviezen."
 
-Voorbeeld voor `linkedin-schrijf-agent`:
+Voorbeeld voor `linkedin-content-team` (orchestrator, één prompt → complete post):
 
-> "Schrijf een LinkedIn-post over [haakje uit research-agent] in mijn stijl, gebruik mijn voice-skill."
+> "Rol mijn content team uit voor het onderwerp [X]."
+
+De orchestrator stuurt research, schrijven, visueel en polish in volgorde aan. Eindresultaat in 2-3 minuten.
 
 ---
 
@@ -69,9 +71,10 @@ linkedin-stijl-skill   ────┘
 linkedin-stijl-template  ──── blok 3: jij bouwt je eigen skill
 
 linkedin-research-agent  ──┐
-linkedin-schrijf-agent   ──┤  blok 4: multi-agent content team
-linkedin-visueel-agent   ──┤
-linkedin-polish-agent    ──┘
+linkedin-schrijf-agent   ──┤
+linkedin-visueel-agent   ──┤  blok 4: multi-agent content team
+linkedin-polish-agent    ──┤
+linkedin-content-team    ──┘  (orchestrator: stuurt de andere vier aan)
 ```
 
 ---
@@ -81,7 +84,9 @@ linkedin-polish-agent    ──┘
 ```
 course-skills/
 ├── README.md                                  ← jij bent hier
+├── LICENSE                                    ← CC BY-NC 4.0
 ├── docs/
+│   ├── stappenplan.html
 │   └── stappenplan.pdf                        ← take-home: zo ga je verder
 └── skills/
     ├── linkedin-stijl-prompt/PROMPT.md
@@ -90,7 +95,8 @@ course-skills/
     ├── linkedin-research-agent/SKILL.md
     ├── linkedin-schrijf-agent/SKILL.md
     ├── linkedin-visueel-agent/SKILL.md
-    └── linkedin-polish-agent/SKILL.md
+    ├── linkedin-polish-agent/SKILL.md
+    └── linkedin-content-team/SKILL.md         ← orchestrator
 ```
 
 ---
@@ -127,7 +133,7 @@ LinkedIn: [linkedin.com/in/michaeldoomen](https://linkedin.com/in/michaeldoomen)
 ## Gegeven door
 
 - **Michael Doomen** - eigenaar CXM-ICT, 14+ jaar ervaring CCM/CXM, 8 jaar developer-ervaring, vibe-coder vanaf dag 1
-- **Joost van der Heijden** - bouwer en vibe coder, AI-prototypes en tools
+- **Joost van der Heijden** - bouwer en vibe coder, 2M+ views, 3.000 leads, case study op twist.nl
 
 ## Vragen of vastgelopen?
 
