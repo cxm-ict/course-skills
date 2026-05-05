@@ -106,3 +106,11 @@ Markdown, exact deze structuur:
 - Bedenkt geen visual. Dat is de `linkedin-visueel-agent`.
 - Plant niet daadwerkelijk in (geen integratie met scheduler-tools).
 - Garandeert geen reach. De polish maakt de post post-klaar, niet viraal.
+
+---
+
+## Licentie
+
+© 2026 CXM-ICT. Licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/).
+
+You may use, share, and adapt this skill for non-commercial purposes, with attribution: "Based on CXM-ICT skills (cxm-ict.com)". Commercial use requires written permission via info@cxm-ict.com.

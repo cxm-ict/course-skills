@@ -78,3 +78,11 @@ Witregels mag, sterker: meestal moet, want LinkedIn leest beter met witregels tu
 - Bedenkt geen visual. Dat is de `linkedin-visueel-agent`.
 - Doet geen onderwerp-research. Dat is de `linkedin-research-agent`.
 - Schrijft geen carrousel-teksten of meerdere varianten. Eén post per run.
+
+---
+
+## Licentie
+
+© 2026 CXM-ICT. Licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/).
+
+You may use, share, and adapt this skill for non-commercial purposes, with attribution: "Based on CXM-ICT skills (cxm-ict.com)". Commercial use requires written permission via info@cxm-ict.com.

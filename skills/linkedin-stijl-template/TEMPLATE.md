@@ -141,3 +141,11 @@ Claude levert posts in deze vorm aan:
 - Geen emoji's in de tekst tenzij sectie 4 anders zegt.
 - Geen hashtags en geen hard sell-CTA. Die voegt de polish-agent later toe.
 - Geen "hier is je post" of vooraf-uitleg. Begin direct met de eerste zin van de post.
+
+---
+
+## Licentie
+
+© 2026 CXM-ICT. Licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/).
+
+You may use, share, and adapt this skill for non-commercial purposes, with attribution: "Based on CXM-ICT skills (cxm-ict.com)". Commercial use requires written permission via info@cxm-ict.com.

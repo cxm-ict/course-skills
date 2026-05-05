@@ -104,10 +104,13 @@ Nee. SKILLS vereisen een betaald abonnement (Claude Pro of hoger).
 De skills zijn geschreven voor Claude. De prompts kun je in ChatGPT gebruiken, maar de SKILLS-functionaliteit (automatisch triggeren op basis van description) bestaat alleen in Claude.
 
 **Mag ik deze skills aanpassen?**
-Ja, sterker: je moet ze aanpassen. Vooral `linkedin-stijl-template` is bedoeld om te personaliseren. De andere zijn templates die je kunt strakker maken voor jouw vakgebied.
+Ja, voor je eigen niet-commerciële gebruik. Vooral `linkedin-stijl-template` is bedoeld om te personaliseren.
 
 **Mag ik ze commercieel gebruiken?**
-Ja. Geen attributie verplicht, wel waardering als je het deelt.
+Nee. Voor commerciële inzet (verkoop, opname in betaalde producten, herdistributie als eigen product) heb je schriftelijke toestemming nodig. Mail info@cxm-ict.com voor een commerciële licentie.
+
+**Wat moet ik doen als ik ze deel of bespreek?**
+Geef credit met de regel: *"Based on CXM-ICT skills (cxm-ict.com)"*.
 
 **Wat als een skill niet triggert?**
 Check de description in de YAML frontmatter. Voeg jouw exacte trigger-zinnen toe ("schrijf in mijn voice" etc).
@@ -129,3 +132,15 @@ LinkedIn: [linkedin.com/in/michaeldoomen](https://linkedin.com/in/michaeldoomen)
 ## Vragen of vastgelopen?
 
 Stuur een DM via LinkedIn of mail info@cxm-ict.com.
+
+## Licentie
+
+© 2026 CXM-ICT. Licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/).
+
+**Wat dit betekent:**
+- Je mag de skills downloaden, gebruiken en aanpassen voor persoonlijke en niet-commerciële doeleinden
+- Je moet credit geven met: *"Based on CXM-ICT skills (cxm-ict.com)"*
+- Je mag ze NIET commercieel inzetten, verkopen, of opnemen in betaalde producten zonder schriftelijke toestemming
+- Voor een commerciële licentie: mail info@cxm-ict.com
+
+Volledige licentietekst: [LICENSE](LICENSE)

@@ -228,3 +228,11 @@ Begin nu met je analyse. Lever het volledige resultaat in één bericht, in de e
 - Werkt het beste bij minimaal 7 eigen posts.
 - Concurrent-keuze bepaalt wat zichtbaar wordt. Kies concurrenten die qua thema raken maar qua stem onderscheidend zijn.
 - Bij minder dan 14 dagen actualiteit-kennis valt sectie 6 terug op een evergreen onderwerp.
+
+---
+
+## Licentie
+
+© 2026 CXM-ICT. Licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/).
+
+You may use, share, and adapt this skill for non-commercial purposes, with attribution: "Based on CXM-ICT skills (cxm-ict.com)". Commercial use requires written permission via info@cxm-ict.com.

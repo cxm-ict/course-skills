@@ -125,3 +125,11 @@ Open een nieuwe Claude.ai chat met alle 5 skills geladen (4 specialisten + voice
 > "Rol mijn content team uit voor het onderwerp [X]."
 
 De orchestrator doorloopt alle 4 stappen sequentieel. Eindresultaat staat in 2-3 minuten klaar.
+
+---
+
+## Licentie
+
+© 2026 CXM-ICT. Licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/).
+
+You may use, share, and adapt this skill for non-commercial purposes, with attribution: "Based on CXM-ICT skills (cxm-ict.com)". Commercial use requires written permission via info@cxm-ict.com.

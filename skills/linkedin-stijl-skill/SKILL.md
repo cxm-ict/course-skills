@@ -116,3 +116,11 @@ Begin direct met de hoofdkop. Geen vooraf-uitleg.
 - Bedenkt geen visuals. Daarvoor is `linkedin-visueel-agent`.
 
 Deze skill levert het FUNDAMENT (de voice-beschrijving) waarop de andere skills bouwen.
+
+---
+
+## Licentie
+
+© 2026 CXM-ICT. Licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/).
+
+You may use, share, and adapt this skill for non-commercial purposes, with attribution: "Based on CXM-ICT skills (cxm-ict.com)". Commercial use requires written permission via info@cxm-ict.com.

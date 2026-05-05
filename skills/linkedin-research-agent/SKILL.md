@@ -102,3 +102,11 @@ Doelgroep: [overgenomen of aangenomen]
 - Geeft geen visual-suggesties. Dat is de `linkedin-visueel-agent`.
 - Voegt geen hashtags of CTA toe. Dat is de `linkedin-polish-agent`.
 - Adviseert niet welk haakje het beste is. De gebruiker kiest.
+
+---
+
+## Licentie
+
+© 2026 CXM-ICT. Licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/).
+
+You may use, share, and adapt this skill for non-commercial purposes, with attribution: "Based on CXM-ICT skills (cxm-ict.com)". Commercial use requires written permission via info@cxm-ict.com.
