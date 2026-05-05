@@ -2,7 +2,7 @@
 <html lang="nl">
 <head>
 <meta charset="UTF-8">
-<title>Stappenplan na de workshop — Workshop AI &amp; SKILLS — CXM-ICT</title>
+<title>Stappenplan na de workshop - Workshop AI &amp; SKILLS - CXM-ICT</title>
 <style>
   @page {
     size: A4;
@@ -571,6 +571,11 @@
 
 <div class="toc">
   <div class="toc-row">
+    <div class="toc-num">00</div>
+    <div class="toc-title">Setup - als je de workshop niet hebt gevolgd</div>
+    <div class="toc-time">10 min</div>
+  </div>
+  <div class="toc-row">
     <div class="toc-num">01</div>
     <div class="toc-title">Maak je voice-skill af</div>
     <div class="toc-time">30 min</div>
@@ -594,7 +599,84 @@
 
 <div class="callout">
   <span class="callout-label">Tijd-investering eerste week</span>
-  <p>Stap 1: 30 min · Stap 2: 60 min · Stap 3: drie keer 30 min posten. Totaal ongeveer 3 uur. Vanaf week 2: 30 min per post.</p>
+  <p>Stap 0 (alleen als je de workshop niet hebt gevolgd): 10 min. Stap 1: 30 min. Stap 2: 60 min. Stap 3: drie keer 30 min posten. Totaal ongeveer 3 uur. Vanaf week 2: 30 min per post.</p>
+</div>
+
+<!-- ========================================== -->
+<!-- STAP 0 - SETUP                              -->
+<!-- ========================================== -->
+<div class="step page-break">
+  <div class="step-header">
+    <div class="step-num" style="background: var(--diep);">0</div>
+    <div class="step-meta">
+      <div class="step-eyebrow">Stap nul · alleen als je de workshop niet hebt gevolgd</div>
+      <h2 class="step-title">Setup in tien minuten</h2>
+      <span class="step-time">10 minuten</span>
+    </div>
+  </div>
+
+  <div class="step-body">
+    <p>
+      Als je dit document gewoon ergens tegenkwam zonder de workshop te hebben gevolgd: welkom. Begin hier. De rest van het document gaat ervan uit dat je deze setup hebt gedaan.
+    </p>
+
+    <h3>Wat je nodig hebt</h3>
+
+    <ul class="bullet">
+      <li><strong>Een Claude.ai account met betaald abonnement</strong> (Pro of hoger). Een gratis account werkt niet, want SKILLS-functionaliteit zit alleen in betaalde plannen.</li>
+      <li><strong>Tien minuten tijd</strong> en een browser.</li>
+    </ul>
+
+    <h3>Wat je doet</h3>
+
+    <div class="substep">
+      <div class="substep-num">1</div>
+      <div class="substep-content">
+        <strong>Download deze repo.</strong> Ga naar <code>github.com/cxm-ict/course-skills</code>, klik <em>Code → Download ZIP</em>, pak uit. Of als je git kent: <code>git clone https://github.com/cxm-ict/course-skills.git</code>.
+      </div>
+    </div>
+
+    <div class="substep">
+      <div class="substep-num">2</div>
+      <div class="substep-content">
+        <strong>Open Claude.ai</strong> in je browser en log in.
+      </div>
+    </div>
+
+    <div class="substep">
+      <div class="substep-num">3</div>
+      <div class="substep-content">
+        <strong>Upload de zes skills.</strong> Ga naar <em>Settings → Capabilities → Skills → Add Skill</em>. Upload één voor één deze bestanden uit de map <code>skills/</code>:
+        <ul class="bullet" style="margin-top: 2mm;">
+          <li><code>linkedin-stijl-template/TEMPLATE.md</code> - werkblad om je voice in te vullen</li>
+          <li><code>linkedin-content-team/SKILL.md</code> - orchestrator</li>
+          <li><code>linkedin-research-agent/SKILL.md</code> - vindt haakjes</li>
+          <li><code>linkedin-schrijf-agent/SKILL.md</code> - schrijft de post</li>
+          <li><code>linkedin-visueel-agent/SKILL.md</code> - bedenkt visual</li>
+          <li><code>linkedin-polish-agent/SKILL.md</code> - hashtags + CTA + posttijd</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="substep">
+      <div class="substep-num">4</div>
+      <div class="substep-content">
+        <strong>Test of het werkt.</strong> Open een nieuwe chat, klik op het skills-icoon, voeg <code>linkedin-content-team</code> toe en typ "test". Als Claude reageert dat de orchestrator klaar staat, is de setup gelukt.
+      </div>
+    </div>
+
+    <div class="substep">
+      <div class="substep-num">5</div>
+      <div class="substep-content">
+        <strong>Door naar stap 1.</strong> Daar bouw je je eigen voice-skill (de zevende skill, en de belangrijkste) op basis van het template dat je net uploaded.
+      </div>
+    </div>
+  </div>
+
+  <div class="callout">
+    <span class="callout-label">Wat je dit document kost</span>
+    <p>Niets. CC0-licentie, geen attributie verplicht, wel waardering als je het deelt. Vragen of vastgelopen? <code>info@cxm-ict.com</code>.</p>
+  </div>
 </div>
 
 <!-- ========================================== -->

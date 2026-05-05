@@ -81,7 +81,7 @@ Markdown met deze structuur:
 ## Stap 1 · Research
 [3 haakjes uit research-agent]
 
-**Gekozen haakje:** [nummer en titel] — [één zin waarom]
+**Gekozen haakje:** [nummer en titel] - [één zin waarom]
 
 ## Stap 2 · Schrijven
 [post-tekst, geen hashtags, geen CTA, in voice van gebruiker]
@@ -89,7 +89,7 @@ Markdown met deze structuur:
 ## Stap 3 · Visueel
 [2-3 concepten uit visueel-agent]
 
-**Aanbeveling:** [concept naam] — [één zin waarom]
+**Aanbeveling:** [concept naam] - [één zin waarom]
 
 ## Stap 4 · Polish
 [hashtags, CTA-opties, posttijd]
