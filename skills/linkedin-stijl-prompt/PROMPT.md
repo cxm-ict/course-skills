@@ -1,6 +1,16 @@
+---
+name: linkedin-stijl-prompt
+description: Use this skill when the user wants to run a one-off LinkedIn writing style analysis on their own posts plus 2-3 competitors' posts. Triggers on phrases like "analyseer mijn LinkedIn-stijl", "stijl-analyse op mijn posts", "vergelijk mijn LinkedIn-stijl met X", "wat onderscheidt mijn schrijfstijl", "LinkedIn voice-analyse". This skill contains the same structured prompt that is used in the workshop demo. It produces a 1500-2500 word output with voice description, competitor comparison, and 5 concrete improvement suggestions.
+---
+
 # LinkedIn-stijl-prompt (blok 1 demo)
 
 Tekstbestand met één lange, gestructureerde prompt. Plak deze in Claude.ai of Claude Code, plak daarna 10 eigen posts en 20 concurrent posts in de aangegeven secties.
+
+Werkt op twee manieren:
+
+1. **Als losse prompt**: kopieer alles tussen de drie backticks hieronder en plak in een nieuwe Claude chat
+2. **Als geüploade SKILL**: upload deze hele PROMPT.md via Settings → Capabilities → Skills. Triggert dan automatisch op de zinnen in de description.
 
 Doel: in 2-3 minuten een scherpe stijl-analyse waarin Claude precies aanwijst wat de schrijver onderscheidt, welke patronen werken, en concrete adviezen geeft om de stijl scherper of schaalbaarder te maken.
 

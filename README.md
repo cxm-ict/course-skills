@@ -10,8 +10,8 @@ Acht skills die samen één workflow vormen: **van je eigen LinkedIn-stijl in ka
 
 | # | Skill | Wat het doet | Voor welk blok |
 |---|-------|--------------|----------------|
-| 1 | `linkedin-stijl-prompt` | Een lange prompt die jouw 10 posts + 20 concurrent-posts analyseert en je voice in kaart brengt | Blok 1 (live demo) |
-| 2 | `linkedin-stijl-skill` | Dezelfde analyse als opgeslagen SKILL met YAML frontmatter | Blok 2 (concept) |
+| 1 | `linkedin-stijl-prompt` | Lange kopieer-en-plak prompt die jouw 10 posts + 20 concurrent-posts analyseert. Werkt ook als upload-skill. | Blok 1 (live demo) |
+| 2 | `linkedin-stijl-skill` | Compactere SKILL-versie van dezelfde analyse, geoptimaliseerd voor automatische triggering | Blok 2 (concept) |
 | 3 | `linkedin-stijl-template` | Werkblad waarmee jij in 30 minuten je eigen voice-skill bouwt | Blok 3 (zelf doen) |
 | 4 | `linkedin-research-agent` | Vindt 3 actuele haakjes (angles) over een onderwerp met bronnen | Blok 4 (multi-agent) |
 | 5 | `linkedin-schrijf-agent` | Schrijft post-tekst in jouw voice op basis van een haakje | Blok 4 |
