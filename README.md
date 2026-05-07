@@ -10,7 +10,7 @@ Zeven skills die samen één workflow vormen: **van je eigen LinkedIn-stijl in k
 
 | # | Skill | Wat het doet | Voor welk blok |
 |---|-------|--------------|----------------|
-| 1 | `linkedin-stijl-skill` | Analyseert jouw 7-10 posts + 14-20 concurrent-posts en levert een complete voice-beschrijving | Blok 1-2 (analyse) |
+| 1 | `linkedin-stijl-analyse` | Analyseert jouw 7-10 posts + 14-20 concurrent-posts en levert een complete voice-beschrijving | Blok 1-2 (analyse) |
 | 2 | `linkedin-stijl-template` | Werkblad waarmee jij in 30 minuten je eigen voice-skill bouwt | Blok 3 (zelf doen) |
 | 3 | `linkedin-research-agent` | Vindt 3 actuele haakjes (angles) over een onderwerp met bronnen | Blok 4 (multi-agent) |
 | 4 | `linkedin-schrijf-agent` | Schrijft post-tekst in jouw voice op basis van een haakje | Blok 4 |
@@ -48,7 +48,7 @@ Of, als je via Claude Code werkt: leg de hele map in `.claude/skills/` van je pr
 
 ### Stap 4 - Vraag iets dat de skill triggert
 
-Voorbeeld voor `linkedin-stijl-skill` (jouw voice in kaart):
+Voorbeeld voor `linkedin-stijl-analyse` (jouw voice in kaart):
 
 > "Hier zijn 7 van mijn LinkedIn-posts en 14 van twee concurrenten. Analyseer mijn stijl en geef me adviezen."
 
@@ -65,7 +65,7 @@ De orchestrator stuurt research, schrijven, visueel en polish in volgorde aan. E
 ## De aanbevolen volgorde voor de workshop
 
 ```
-linkedin-stijl-skill     ──── blok 1-2: jouw voice in kaart
+linkedin-stijl-analyse     ──── blok 1-2: jouw voice in kaart
 
 linkedin-stijl-template  ──── blok 3: jij bouwt je eigen skill
 
@@ -88,7 +88,7 @@ course-skills/
 │   ├── stappenplan.html
 │   └── stappenplan.pdf                        ← take-home: zo ga je verder
 └── skills/
-    ├── linkedin-stijl-skill/SKILL.md
+    ├── linkedin-stijl-analyse/SKILL.md
     ├── linkedin-stijl-template/TEMPLATE.md
     ├── linkedin-research-agent/SKILL.md
     ├── linkedin-schrijf-agent/SKILL.md
