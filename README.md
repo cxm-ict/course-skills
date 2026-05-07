@@ -2,22 +2,21 @@
 
 Materiaal bij de **Workshop AI & SKILLS** van CXM-ICT, 6 mei 2026 voor Twist Marketing.
 
-Acht skills die samen één workflow vormen: **van je eigen LinkedIn-stijl in kaart brengen tot één post in 3 minuten in plaats van 2 uur**.
+Zeven skills die samen één workflow vormen: **van je eigen LinkedIn-stijl in kaart brengen tot één post in 3 minuten in plaats van 2 uur**.
 
 ---
 
-## De acht skills
+## De zeven skills
 
 | # | Skill | Wat het doet | Voor welk blok |
 |---|-------|--------------|----------------|
-| 1 | `linkedin-stijl-prompt` | Lange kopieer-en-plak prompt die jouw 10 posts + 20 concurrent-posts analyseert. Werkt ook als upload-skill. | Blok 1 (live demo) |
-| 2 | `linkedin-stijl-skill` | Compactere SKILL-versie van dezelfde analyse, geoptimaliseerd voor automatische triggering | Blok 2 (concept) |
-| 3 | `linkedin-stijl-template` | Werkblad waarmee jij in 30 minuten je eigen voice-skill bouwt | Blok 3 (zelf doen) |
-| 4 | `linkedin-research-agent` | Vindt 3 actuele haakjes (angles) over een onderwerp met bronnen | Blok 4 (multi-agent) |
-| 5 | `linkedin-schrijf-agent` | Schrijft post-tekst in jouw voice op basis van een haakje | Blok 4 |
-| 6 | `linkedin-visueel-agent` | Bedenkt 2-3 visuele concepten bij een post | Blok 4 |
-| 7 | `linkedin-polish-agent` | Voegt hashtags, CTA en posttijd toe en levert klaar-om-te-posten | Blok 4 |
-| 8 | `linkedin-content-team` | Orchestrator. Stuurt skills 4-7 aan in volgorde via één prompt | Blok 4 (master) |
+| 1 | `linkedin-stijl-skill` | Analyseert jouw 7-10 posts + 14-20 concurrent-posts en levert een complete voice-beschrijving | Blok 1-2 (analyse) |
+| 2 | `linkedin-stijl-template` | Werkblad waarmee jij in 30 minuten je eigen voice-skill bouwt | Blok 3 (zelf doen) |
+| 3 | `linkedin-research-agent` | Vindt 3 actuele haakjes (angles) over een onderwerp met bronnen | Blok 4 (multi-agent) |
+| 4 | `linkedin-schrijf-agent` | Schrijft post-tekst in jouw voice op basis van een haakje | Blok 4 |
+| 5 | `linkedin-visueel-agent` | Bedenkt 2-3 visuele concepten bij een post | Blok 4 |
+| 6 | `linkedin-polish-agent` | Voegt hashtags, CTA en posttijd toe en levert klaar-om-te-posten | Blok 4 |
+| 7 | `linkedin-content-team` | Orchestrator. Stuurt skills 3-6 aan in volgorde via één prompt | Blok 4 (master) |
 
 ---
 
@@ -59,14 +58,14 @@ Voorbeeld voor `linkedin-content-team` (orchestrator, één prompt → complete 
 
 De orchestrator stuurt research, schrijven, visueel en polish in volgorde aan. Eindresultaat in 2-3 minuten.
 
+> Note: voor je `linkedin-content-team` kunt gebruiken, moet ook je voice-skill geladen zijn. Die maak je in stap 2 van het [stappenplan](docs/stappenplan.pdf).
+
 ---
 
 ## De aanbevolen volgorde voor de workshop
 
 ```
-linkedin-stijl-prompt    ──┐
-                           │  blok 1-2: jouw voice in kaart
-linkedin-stijl-skill   ────┘
+linkedin-stijl-skill     ──── blok 1-2: jouw voice in kaart
 
 linkedin-stijl-template  ──── blok 3: jij bouwt je eigen skill
 
@@ -89,7 +88,6 @@ course-skills/
 │   ├── stappenplan.html
 │   └── stappenplan.pdf                        ← take-home: zo ga je verder
 └── skills/
-    ├── linkedin-stijl-prompt/PROMPT.md
     ├── linkedin-stijl-skill/SKILL.md
     ├── linkedin-stijl-template/TEMPLATE.md
     ├── linkedin-research-agent/SKILL.md
